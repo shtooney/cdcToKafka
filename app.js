@@ -38,7 +38,7 @@ return producer.init().then(function(){
                     topic:`${process.env.KAFKA_PREFIX}caseActivity`,
                     partition:0,
                     message:{
-                        value: message.payload
+                        value: JSON.stringify(message.payload);
                     },
                 }).then(function(result){
                     console.log(result);

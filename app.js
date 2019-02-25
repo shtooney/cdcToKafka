@@ -23,6 +23,20 @@ const producer = new Kafka.Producer({
 
 return producer.init().then(function(){
     console.log('Producer Connected');
+    org.authenticate({username: process.env.SFDCUSERNAME, password: process.env.SFDCPASSWORD}, function(err, resp){
+        if(!err){
+            console.log('SFDC Auth Connected');
+            console.log(`attempting client at ${org.oauth.instance_url}/cometd/45.0/`);
+            var fClient = new faye.Client(`${org.oauth.instance_url}/cometd/45.0/`);
+            fClient.setHeader('Authorization', 'OAuth ' + org.oauth.access_token);
+            fClient.subscribe('data/CaseChangeEvent', function(message){
+                console.log('we GOT ONE');
+                console.log(message.payload);
+            });
+        }
+    });
+    
+    /*
     producer.send({
         topic: `${process.env.KAFKA_PREFIX}caseActivity`,
         partition: 0,
@@ -32,4 +46,5 @@ return producer.init().then(function(){
     }).then(function (result) {
         console.log(result);
     });
+    */
 });

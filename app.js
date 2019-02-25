@@ -1,6 +1,7 @@
 const nforce = require('nforce');
 const fs = require('fs');
 const Kafka = require('no-kafka');
+const faye = require('faye');
 
 fs.writeFileSync('./client.crt', process.env.KAFKA_CLIENT_CERT);
 fs.writeFileSync('./client.key', process.env.KAFKA_CLIENT_CERT_KEY);

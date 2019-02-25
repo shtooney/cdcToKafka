@@ -32,7 +32,17 @@ return producer.init().then(function(){
             fClient.setHeader('Authorization', 'OAuth ' + org.oauth.access_token);
             fClient.subscribe('/data/CaseChangeEvent', function(message){
                 console.log('we GOT ONE');
-                console.log(message.payload);
+                //console.log(message.payload);
+                console.log('sending to Kafka CaseActivtiy');
+                producer.send({
+                    topic:`${process.env.KAFKA_PREFIX}caseActivity`,
+                    partition:0,
+                    message:{
+                        value: message.payload
+                    },
+                }).then(function(result){
+                    console.log(result);
+                });
             });
         }
     });

@@ -24,7 +24,7 @@ const producer = new Kafka.Producer({
 return producer.init().then(function(){
     console.log('Producer Connected');
     producer.send({
-        topic: 'caseActivity',
+        topic: `${process.env.KAFKA_PREFIX}caseActivity`,
         partition: 0,
         message: {
             value: 'Test Write'

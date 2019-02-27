@@ -30,12 +30,12 @@ return producer.init().then(function(){
             console.log(`attempting client at ${org.oauth.instance_url}/cometd/45.0/`);
             var fClient = new faye.Client(`${org.oauth.instance_url}/cometd/45.0/`);
             fClient.setHeader('Authorization', 'OAuth ' + org.oauth.access_token);
-            fClient.subscribe('/data/CaseChangeEvent', function(message){
+            fClient.subscribe(`${process.env.SF_CHANNEL}`, function(message){
                 console.log('we GOT ONE');
                 //console.log(message.payload);
-                console.log('sending to Kafka CaseActivtiy');
+                console.log(`Sending to Kafka Topic : ${process.env.KAFKA_TOPIC}`);
                 producer.send({
-                    topic:`${process.env.KAFKA_PREFIX}caseActivity`,
+                    topic:`${process.env.KAFKA_PREFIX}${process.env.KAFKA_TOPIC}`,
                     partition:0,
                     message:{
                         value: JSON.stringify(message.payload)

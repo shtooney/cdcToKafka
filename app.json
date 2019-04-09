@@ -16,8 +16,8 @@
             "value": "production"
         },
         "SFDCUSERNAME":{
-            "description": "smith@rhody.example",
-            "value": ""
+            "description": "Salesforce username",
+            "value": "smith@rhody.example"
         },
         "SFDCPASSWORD":{
             "description": "Salesforce user password - don't forget the token",
@@ -25,7 +25,7 @@
         },
         "KAFKA_TOPIC":{
             "description": "Name of the Kafka Topic to write to",
-            "value": ""
+            "value": "fund"
         },
         "SF_CHANNEL":{
             "description": "The object change event channel name. (starts with /data/...)",

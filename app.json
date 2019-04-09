@@ -5,23 +5,23 @@
     "env":{
         "CLIENTID":{
             "description": "Salesforce connected app OAuth client ID",
-            "value": ""
+            "value": "3MVG9KsVczVNcM8wdEPsZn5MdMQvYeTO389n1_bjz6bQd1BT05z0yS3F11QS.TBWA3vc3Fv8G0hWz7TFJDsXb"
         },
         "CLIENTSECRET":{
             "description": "Salesforce connected app OAuth client secret",
-            "value": ""
+            "value": "CAD5DF20D86A9109B5EF56E2C5D76743601E9B6A4587D6C6E50DDEB42EEA8B58"
         },
         "ENVIRONMENT":{
             "description": "Salesforce environment type (production, sandbox, etc)",
             "value": "production"
         },
         "SFDCUSERNAME":{
-            "description": "Salesforce username",
+            "description": "smith@rhody.example",
             "value": ""
         },
         "SFDCPASSWORD":{
             "description": "Salesforce user password - don't forget the token",
-            "value": ""
+            "value": "salesforce2czzqlAGgiqgm5c9OEJL8AGMo"
         },
         "KAFKA_TOPIC":{
             "description": "Name of the Kafka Topic to write to",

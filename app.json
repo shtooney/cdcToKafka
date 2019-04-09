@@ -29,7 +29,7 @@
         },
         "SF_CHANNEL":{
             "description": "The object change event channel name. (starts with /data/...)",
-            "value": "/data/ChangeEvent"
+            "value": "/data/Fund__ChangeEvent"
         },
         KAFKA_PREFIX:{
             "description": "If you're using a shared Kafka tier, you need to enter the prefix to connect.",

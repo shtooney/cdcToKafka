@@ -17,7 +17,7 @@
         },
         "SFDCUSERNAME":{
             "description": "Salesforce username",
-            "value": "smith@rhody.example"
+            "value": "russ@rhode.example"
         },
         "SFDCPASSWORD":{
             "description": "Salesforce user password - don't forget the token",

@@ -33,7 +33,7 @@
         },
         "KAFKA_PREFIX":{
             "description": "If you're using a shared Kafka tier, you need to enter the prefix to connect.",
-            "value": "joan-12453"
+            "value": "arkansas-77613"
         }
     }
 }

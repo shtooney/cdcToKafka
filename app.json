@@ -21,7 +21,7 @@
         },
         "SFDCPASSWORD":{
             "description": "Salesforce user password - don't forget the token",
-            "value": "salesforce2czzqlAGgiqgm5c9OEJL8AGMo"
+            "value": "salesforce2h17tF0mPiNfECHqrUBreQbBV"
         },
         "KAFKA_TOPIC":{
             "description": "Name of the Kafka Topic to write to",
